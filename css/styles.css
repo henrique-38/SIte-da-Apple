@@ -23,25 +23,33 @@ header {
     height: 15vh;
 }
 
-.menu {
+.menu>ul {
     display: flex;
     justify-content: space-evenly;
     min-width: 80vw;
     padding: 0;
     margin: 0;
+    flex-direction: row;
+    list-style: none;
 }
 
-.menu>li {
+.menu>ul>li {
     list-style-type: none
 }
 
-.menu>li>a {
+.menu>ul>li>a {
     text-decoration: none;
     color: white;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 main {
+    width: 100%;
+    text-align: center;
+}
+
+main>h1 {
+    font-size: 4rem;
     padding: 4rem;
 }
 
@@ -77,6 +85,7 @@ main {
     gap: 20px;
     justify-content: center;
     margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .card {
@@ -143,8 +152,74 @@ main {
     width: 100%;
 }
 
-/* Video */
-
 .macbookVideo {
     width: 100%;
+}
+
+.AirpodseAPPLEWatchVideo {
+    width: 100%;
+}
+
+.AirpodseAPPLEWatchVideo {
+    width: 100%;
+}
+
+/* Hamburger */
+#hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Menu base (escondido à esquerda) */
+@media (max-width: 750px) {
+    #hamburger {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 101;
+    }
+
+    nav.menu {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        /* fora do ecrã à esquerda */
+        width: 250px;
+        height: 100vh;
+        background-color: cornflowerblue;
+        flex-direction: column;
+        padding: 6rem 1rem;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        transition: left 0.3s ease;
+        z-index: 100;
+    }
+
+    nav.menu.show {
+        left: 0;
+    }
+
+    nav.menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav.menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    main>h1 {
+        font-size: 2rem;
+    }
+
 }

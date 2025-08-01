@@ -13,22 +13,30 @@
 <body>
     <header>
         <img id="Logo" src="./images/a4256d6091fd0d0469304353f3a7be3b.jpg" alt="">
-        <ul class="menu">
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./iphone.html">iPhone</a></li>
-            <li><a href="./macbook.html">MacBook</a></li>
-            <li><a href="./APPLE Watch.html">Apple Watch e AirPods</a></li>
-        </ul>
+
+        <!-- Botão Hamburger -->
+        <button id="hamburger" class="d-lg-none">&#9776;</button>
+
+        <!-- Menu de navegação -->
+        <nav class="menu" id="navMenu">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./iphone.html">iPhone</a></li>
+                <li><a href="./macbook.html">MacBook</a></li>
+                <li><a href="./APPLE Watch.html">Apple Watch e AirPods</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="mainIphone">
-        <video class="iphoneVideo" controls>
+        <h1>iPhones</h1>
+
+        <video class="iphoneVideo" autoplay muted loop playsinline>
             <source src="./images/large.mp4" type="video/mp4" />
 
             Download the
             <a href="./images/large.mp4">MP4</a>
             video.
         </video>
-        <h1>iPhones</h1>
 
         <div class="cards-container">
             <div class="card">
@@ -60,7 +68,7 @@
             </div>
         </div>
     </main>
-
+    <script src="./js/menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
